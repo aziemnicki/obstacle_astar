@@ -86,9 +86,9 @@ private:
   PoseStamped current_pose_;
   PoseStamped goal_pose_;
   Trajectory current_trajectory_;
-  bool is_trajectory_saved_ = false; // dodać do konstruktora
-  bool is_avoiding_ = false; // dodać do konstruktora
-
+  bool is_trajectory_saved_ = false; 
+  bool is_avoiding_ = false; 
+  
   Trajectory::ConstSharedPtr input_trajectory_;
   OccupancyGrid::ConstSharedPtr occupancy_grid_;
   Odometry::ConstSharedPtr odom_;
