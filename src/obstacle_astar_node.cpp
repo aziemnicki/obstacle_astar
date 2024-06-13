@@ -136,7 +136,6 @@ ObstacleAstarNode::ObstacleAstarNode(const rclcpp::NodeOptions & node_options)
     qos.transient_local();
     trajectory_pub_ = create_publisher<Trajectory>("~/output/trajectory", qos);
 
-    markers_pub_ = create_publisher<visualization_msgs::msg::MarkerArray>("~/output/markers", rclcpp::QoS(1000));
   }
 
   // Timer
