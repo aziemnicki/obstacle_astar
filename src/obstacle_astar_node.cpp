@@ -220,10 +220,6 @@ void ObstacleAstarNode::PlanTrajectory()
   const bool result = algo_->makePlan(start_pose.pose, goal_pose_.pose);
   const rclcpp::Time end = get_clock()->now();
 
-  visualization_msgs::msg::MarkerArray marker_array;
-  marker_array = algo_->getMarkerArray();
-  markers_pub_->publish(marker_array);
-
   if (result) {
     is_avoiding_ = true;
 
